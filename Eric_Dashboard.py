@@ -33,7 +33,6 @@ def audience_simple(country):
         return 'Other'
     
 #load data
-@st.cache_data
 def load_data():
     df_agg = pd.read_csv('Aggregated_Metrics_By_Video.csv').iloc[1:,:]
     df_agg.columns = ['Video','Video title','Video publish time','Comments added','Shares','Dislikes','Likes',
